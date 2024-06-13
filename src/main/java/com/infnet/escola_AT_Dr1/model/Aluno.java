@@ -1,11 +1,15 @@
 package com.infnet.escola_AT_Dr1.model;
 
+import jakarta.persistence.Id;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "alunos")
 @Data
+@Getter
+@Setter
 public class Aluno {
     @Id
     private String id;
