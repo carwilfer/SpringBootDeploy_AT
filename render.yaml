@@ -1,0 +1,13 @@
+services:
+  - name: sua-aplicacao
+    type: web
+    env: docker
+    buildCommand: docker build -t sua-aplicacao .
+    startCommand: docker run -p 8080:8080 sua-aplicacao
+    envVars:
+      - key: DATABASE_URL
+        value: ${DATABASE_URL}
+      - key: DATABASE_USERNAME
+        value: ${DATABASE_USERNAME}
+      - key: DATABASE_PASSWORD
+        value: ${DATABASE_PASSWORD}
